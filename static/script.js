@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const myP = myDiv.querySelector('p')
 
     // Change the text if the existing h1 and p elements in timer.html
-    myH1.textContent = "New Heading Text";
-    myP.textContent = "New Paragraph Text";
+    myH1.textContent = "Round Timer";
+    myP.textContent = "Round:";
 
     // Create a new paragraph element
     const newParagraph = document.createElement('p');

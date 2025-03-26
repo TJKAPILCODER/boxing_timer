@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>JavaScript Test</title>
+        <title>Round Interval Timer</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     </head>
     <body>
     <div id ="myDiv">
-        <h1>My Basic Timer</h1> 
-        <p>This is a paragraph</p>
-        <button id = "myButton">Click Me!</button>
-        <span id="mySpan">Intial Span Text</span>
-        <div id="toggleDiv">
-            This div will be toggled.
-        </div>
+
+        <h1>Round Timer</h1> 
+
+        <p>Round: <span id="roundDisplay">1</span></p>
+
+        <p>Time: <span id="timeDisplay">0:00</span></p>
+
+        <button id = "startButton">Start</button>
+
+        <button id = "pauseButton" style="display: none">Pause</button>
+
+        <button id = "resetButton" style="display: none">Reset</button>
+
+        <div id="toggleDiv"> This div will be toggled.</div>
+        
     </div>
         <script src="{{ url_for('static', filename='script.js') }}"></script>
     </body>

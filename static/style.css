@@ -17,3 +17,41 @@ body {
     border-radius: 5px; /* Round the Corners*/
     background-color: #f9f9f9; /* Light background color */
 }
+
+#myButton {
+    padding: 10px 20px; /* Add padding to the button*/
+    font-size: 16px; /* Increase the font size */
+    cursor: pointer; /* Change cursor when mouse pointer over button */
+    background-color: #4CAF50; /* Start Button Green */
+    color: white; /* White text for "Start" Withtin Button */
+    border: none; /* Remove the border */
+    border-radius: 5px; /* round the corners */
+}
+
+#myButton:hover {
+    background-color: #3e8e41; /* when mouse hovers over button, it becomes darker green */
+}
+
+#mySpan {
+    font-weight: bold; /* Bold text */
+    display: block; /* make it a block level comment */
+    margin-top: 10px; /* Add spacing above */
+}
+
+#toggleDiv {
+    display: none; /* Intially hide the div */
+    margin-top: 10px; /* Add some spacing from top */
+    padding: 10px; /* Add padding around div */
+    background-color: #e0f7fa; /* Light blue background */
+    border: 1px solid #b2ebf2; /* Loght blue border */
+    border-radius: 5px; /* Round the corners */
+}
+
+#roundDisplay {
+    font-size: 2em;
+    font-weight: bold; /* this will make the text it bold */
+}
+
+#timeDisplay {
+
+}
