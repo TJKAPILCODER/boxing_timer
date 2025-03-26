@@ -2,15 +2,24 @@
 
 // The code below will run after the HTML document is fully loaded. 
 document.addEventListener('DOMContentLoaded', function() {
-    // This will get the html element with the ID 'myDiv'
-    // This can be used to manipulate the content and style of the div. 
-    const myDiv = document.getElementById('myDiv')
+    // Get the div element by its ID
+    const myDiv = document.getElementById('myDiv');
+    
+    const myH1 = myDiv.querySelector('h1');
+    const myP = myDiv.querySelector('p')
 
-    // This will change the HTML conent inside the div.
-    // We're replacing what currently in myDiv h1, p1 with new content. 
-    myDiv.innerHTML = '<h1>New Content from JavaScript!</h1><p>This paragraph was added by  JavaScript</p>';
+    // Change the text if the existing h1 and p elements in timer.html
+    myH1.textContent = "New Heading Text";
+    myP.textContent = "New Paragraph Text";
 
-    // This will change the hackgorund color of my deiv to light blue. 
-    // this demostates how to modify the style of an element using JavaScript.
-    myDiv.style.backgroundColor = 'lightblue'
+    // Create a new paragraph element
+    const newParagraph = document.createElement('p');
+    newParagraph.textContent = "This is new paragraph added by Javascript";
+
+    // Append the new paragraph to the div
+    myDiv.appendChild(newParagraph);
+
+    // Change the background color of the fix
+    myDiv.style.backgroundColor = 'lightblue';
+
 });
