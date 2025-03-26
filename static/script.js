@@ -28,11 +28,23 @@ document.addEventListener('DOMContentLoaded', function() {
     // Get the span element by it's ID
     const mySpan = document.getElementById("mySpan")
 
+    // Get the toggleDiv element bu it's ID
+    const toggleDiv = document.getElementById("toggleDiv")
+
+
     // Add a click event listener to the button
     myButton.addEventListener('click', function() {
-        // This will change the text of the Span when the button is clicked. 
-        mySpan.textContent = "Button Clicked!";
+        // Toggle the visibility of the toggleDiv when the button is clicked
+        if (toggleDiv.style.display === 'none'){ 
+            toggleDiv.style.display = 'block'
+        } else {
+            toggleDiv.style.display = 'none'
+        }
+
+        if(myButton.textContent === "Click Me!") {
+            myButton.textContent = "Hide Div";
+        } else {
+            myButton.textContent = "Click Me!";
+        }
     });
-
-
 });

@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>JavaScript Test</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     </head>
     <body>
     <div id ="myDiv">
@@ -9,6 +10,9 @@
         <p>This is a paragraph</p>
         <button id = "myButton">Click Me!</button>
         <span id="mySpan">Intial Span Text</span>
+        <div id="toggleDiv">
+            This div will be toggled.
+        </div>
     </div>
         <script src="{{ url_for('static', filename='script.js') }}"></script>
     </body>

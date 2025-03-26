@@ -1,0 +1,11 @@
+/* here we will style the timer.html page*/
+
+body {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+#toggleDiv {
+    display: none; /* intialy hide the fiv */
+    margin-top: 10px; /* Add some spacing */
+}
