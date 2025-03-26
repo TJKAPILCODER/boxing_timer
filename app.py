@@ -16,5 +16,9 @@ def hello(): # This is a function named hello(), which will executed when the us
 def show_timer():
     return render_template("timer.html") # This will render the timer.html pahge
 
+# The server will automatically reload when you make changes to your code due to debug = True
 if __name__ == "__main__":
     app.run(debug=True)
+# detailed error messages in your browser
+# Debug mode should never be used in production environments, 
+# as it can expose sensitive information and slow down your application.
