@@ -22,4 +22,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // Change the background color of the fix
     myDiv.style.backgroundColor = 'lightblue';
 
+    // get the button element by it's ID
+    const myButton = document.getElementById("myButton");
+
+    // Get the span element by it's ID
+    const mySpan = document.getElementById("mySpan")
+
+    // Add a click event listener to the button
+    myButton.addEventListener('click', function() {
+        // This will change the text of the Span when the button is clicked. 
+        mySpan.textContent = "Button Clicked!";
+    });
+
+
 });
