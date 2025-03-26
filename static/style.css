@@ -9,3 +9,11 @@ body {
     display: none; /* intialy hide the fiv */
     margin-top: 10px; /* Add some spacing */
 }
+
+#myDiv {
+    width: 300px; /* set a fixed width */
+    margin: 20px auto; /* Center the div */
+    padding: 20px; /* Add some padding inside the div */
+    border-radius: 5px; /* Round the Corners*/
+    background-color: #f9f9f9; /* Light background color */
+}
