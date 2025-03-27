@@ -2,49 +2,36 @@
 
 // The code below will run after the HTML document is fully loaded. 
 document.addEventListener('DOMContentLoaded', function() {
-    // Get the div element by its ID
-    const myDiv = document.getElementById('myDiv');
-    
-    const myH1 = myDiv.querySelector('h1');
-    const myP = myDiv.querySelector('p')
 
-    // Change the text if the existing h1 and p elements in timer.html
-    myH1.textContent = "Round Timer";
-    myP.textContent = "Round:";
+// VARIABLES ----------------------------------------------------------------------------------------------------------
 
-    // Create a new paragraph element
-    const newParagraph = document.createElement('p');
-    newParagraph.textContent = "This is new paragraph added by Javascript";
+    // Get the timer display elements and assign them to variables. 
+   const roundDisplay = document.getElementById("roundDisplay"); // Get the "roundDisplay" HTML element
+   const timeDisplay = document.getElementById("timeDisplay"); // Get the "timeDisplay" HTML element
 
-    // Append the new paragraph to the div
-    myDiv.appendChild(newParagraph);
+   // Get the Start, Payse, reset buttons and assign them to variables
+   const startButton = document.getElementById("startButton"); // Get the HTML element with the ID "startButton"
+   const pauseButton = document.getElementById("pauseButton"); // Get the HTML element with the ID "pausebutton"
+   const resetButton = document.getElementById("resetButton"); // Get the HTML element with the ID "resetButton"
 
-    // Change the background color of the fix
-    myDiv.style.backgroundColor = 'lightblue';
-
-    // get the button element by it's ID
-    const myButton = document.getElementById("myButton");
-
-    // Get the span element by it's ID
-    const mySpan = document.getElementById("mySpan")
-
-    // Get the toggleDiv element bu it's ID
-    const toggleDiv = document.getElementById("toggleDiv")
+    // Timer variables
+    let roundNumber = 1; // intially round number is initialized to 1
+    let roundTimeSeconds = 10; // Intially intialized time to 10 seconds for testing, will be changed based on user selection
+    let timeRemaining = roundTimeSeconds;
+    let timerInterval; // Store interval ID for the Timer
+    let isTimerRunning = false; // boolean to check if timeer is running or not. 
 
 
-    // Add a click event listener to the button
-    myButton.addEventListener('click', function() {
-        // Toggle the visibility of the toggleDiv when the button is clicked
-        if (toggleDiv.style.display === 'none'){ 
-            toggleDiv.style.display = 'block'
-        } else {
-            toggleDiv.style.display = 'none'
-        }
 
-        if(myButton.textContent === "Click Me!") {
-            myButton.textContent = "Hide Div";
-        } else {
-            myButton.textContent = "Click Me!";
-        }
+    // FUNCTIONS ----------------------------------------------------------------------------------------------------------
+
+    // Function that will update the time display, so every second the minutes and seconds will be calculated and put in a format mm:ss
+    function updateTimeDisplay() {
+        const minutes = Math.floor(timeRemaining/60) // the minutes remaining
+        const seconds = (timeRemaining/60) // the seconds remaining
+        // update display with formatted time
+        timeDisplay.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+    }
+
     });
-});

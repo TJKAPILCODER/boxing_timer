@@ -3,22 +3,20 @@
 body {
     font-family: sans-serif;
     text-align: center;
-}
+    background-color: #20262E;
+    color: #fff; /* White text */
 
-#toggleDiv {
-    display: none; /* intialy hide the fiv */
-    margin-top: 10px; /* Add some spacing */
-}
+
 
 #myDiv {
     width: 300px; /* set a fixed width */
     margin: 20px auto; /* Center the div */
     padding: 20px; /* Add some padding inside the div */
     border-radius: 5px; /* Round the Corners*/
-    background-color: #f9f9f9; /* Light background color */
+    background-color: #191970; /* Light background color */
 }
 
-#myButton {
+#startButton {
     padding: 10px 20px; /* Add padding to the button*/
     font-size: 16px; /* Increase the font size */
     cursor: pointer; /* Change cursor when mouse pointer over button */
@@ -28,8 +26,36 @@ body {
     border-radius: 5px; /* round the corners */
 }
 
-#myButton:hover {
+#startButton:hover {
     background-color: #3e8e41; /* when mouse hovers over button, it becomes darker green */
+}
+
+#pauseButton {
+    padding: 10px 20px; /* Add padding to the button*/
+    font-size: 16px; /* Increase the font size */
+    cursor: pointer; /* Change cursor when mouse pointer over button */
+    background-color: #FFA500; /* pause Button orange */
+    color: white; /* White text for "pause" Withtin Button */
+    border: none; /* Remove the border */
+    border-radius: 5px; /* round the corners */
+}
+
+#pauseButton:hover {
+    background-color: #FF8C00; /* when mouse hovers over button, it becomes darker green */
+}
+
+#resetButton {
+    padding: 10px 20px; /* Add padding to the button*/
+    font-size: 16px; /* Increase the font size */
+    cursor: pointer; /* Change cursor when mouse pointer over button */
+    background-color: #808080; /* reset Button grey */
+    color: white; /* White text for "reset" Withtin Button */
+    border: none; /* Remove the border */
+    border-radius: 5px; /* round the corners */
+}
+
+#resetButton:hover {
+    background-color: #696969; /* when mouse hovers over button, it becomes darker green */
 }
 
 #mySpan {
@@ -50,8 +76,12 @@ body {
 #roundDisplay {
     font-size: 2em;
     font-weight: bold; /* this will make the text it bold */
+    color: #fff; /* White text for round number */
 }
 
 #timeDisplay {
+    font-size: 3em;
+    color: #fff; /* White text for round number */
+}
 
 }
