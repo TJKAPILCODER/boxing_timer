@@ -4,6 +4,9 @@
 document.addEventListener('DOMContentLoaded', function() {
 
 // VARIABLES ----------------------------------------------------------------------------------------------------------
+    // document is a special object that reads the whole HTML page
+    // addEventListener will tell the browser to do somethign when the pge is finished loading
+    // After the page has fincshed loding "DOMContenedLoaled, then the function is what happens"
 
     // Get the timer display elements and assign them to variables. 
    const roundDisplay = document.getElementById("roundDisplay"); // Get the "roundDisplay" HTML element
@@ -33,5 +36,40 @@ document.addEventListener('DOMContentLoaded', function() {
         timeDisplay.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
 
     }
+
+    // Function to start the timer when the start button is clicked. 
+    function startTimer() {
+        if (!isTimerRunning) { // So we are checking if the timer is not running
+            isTimerRunning = true; // make the timer run so true
+            startButton.style.display = 'none' // start button goes away
+            pauseButton.style.display = 'block' // pause button goes away
+            resetbutton.style.display = 'reset' // reset button goes away
+            
+            updateTimeDisplay() // intial time showed on the page
+
+            timerInterval = setInterval(() => {
+                
+
+
+
+            }, 1000);
+
+
+        }
+    }
+
+    function pauseTimer() {
+
+    }
+
+    function resetTimer() {
+
+    }
+
+    
+// Event Listenrs: Basically each time a button is clicked, this are linked to one of the function above (4), 
+// depending on what button is clicked. 
+
+
 
     });
